@@ -5,25 +5,26 @@ function App() {
 
   return (
     <>
-      <div class="banner">
+      <div class="head">
         <header>
           <h2>Personal Finance Tracker</h2>
+          <p>A simple web app for finance tracking</p>
         </header>
       </div>
-      <div>
-        <div class="expenses">
+      <div class="summary">
+        <div class="total">
           <h3>Total Expenses</h3>
           <a href="">0.00</a>
         </div>
-        <div class="income">
+        <div class="total">
           <h3>Total Income</h3>
           <a href="">0.00</a>
         </div>
-        <div class="balance">
+        <div class="total">
           <h3>Total Balance</h3>
           <a href="">0.00</a>
         </div>
-        <div class="savings">
+        <div class="total">
           <h3>Total Savings</h3>
           <a href="">0.00</a>
         </div>
@@ -32,9 +33,10 @@ function App() {
         <div class="head">
           <h2>Add New Transaction</h2>
         </div>
-        <form>
+        <div class ="form">
+ <form>
           <div class="type">
-            <label htmlFor="">Category</label>
+            <label htmlFor="">Category: </label>
             <select id="category" required>
               <option value="Income">Income</option>
               <option value="Expense">Expense</option>
@@ -45,7 +47,7 @@ function App() {
             <label htmlFor="expense-name">Title: </label>
             <input type="text" placeholder="eg., Light Bill" required />
           </div>
-          <div>
+            <div>
             <label htmlFor="amount">Amount (N): </label>
             <input
               type="number"
@@ -55,23 +57,31 @@ function App() {
             />
           </div>
           <div class ="date">
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date">Date:</label>
             <input type="date" required/>
-          </div>
+          </div>          
           <div class="details">
-            <label htmlFor="extras">Description</label>
+            <label htmlFor="extras">Description:</label>
             <input type="text" placeholder="Enter Description (Optional)" />
           </div>
+                <button type="submit">Submit Transaction</button>
         </form>
+        </div>
       </div>
 
       <div className="chart">
+        <div class ="head">
         <h2>Financial Overview</h2>
+        </div>
         <div class="cards">
           <div class="chart-tab" data-chart="bar-chart">Income Vs Expenses</div>
         </div>
+      </div>
+      <div>
         <div class="history">
+          <div class ="head">
           <h2>Recent Transactions</h2>
+          </div>
           <div class="filter">
             <div class='filter-group'>
               <label htmlFor="type">Type: </label>
